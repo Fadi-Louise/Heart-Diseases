@@ -1,132 +1,145 @@
-Heart Disease Classification Project
+# Heart Disease Classification Project
 
-Author: Fadi-Louise
-Last Updated: 2025-03-31
-Project Overview
+**Author**: Fadi-Louise  
+**Last Updated**: 2025-03-31  
 
-This project implements a machine learning pipeline to predict heart disease based on patient medical data. The pipeline includes data cleaning, exploratory data analysis, feature selection, model training with regularization techniques, and model evaluation.
-Table of Contents
+## Overview
 
-    Introduction
-    Dataset
-    Implementation Details
-    Installation
-    Usage
-    Results
-    Future Work
+This project implements a machine learning pipeline to predict heart disease based on medical data. The pipeline involves data cleaning, exploratory data analysis (EDA), feature selection, model training with regularization, and evaluation.
 
-Introduction
+## Table of Contents
 
-Heart disease is a leading cause of death globally. Early detection and prediction of heart disease can significantly improve patient outcomes. This project develops a classification model to predict the likelihood of heart disease based on patient attributes and medical measurements.
+- [Introduction](#introduction)
+- [Dataset](#dataset)
+- [Implementation Details](#implementation-details)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Results](#results)
+- [Future Work](#future-work)
 
-The project demonstrates several machine learning techniques including:
+## Introduction
 
-    Data cleaning and preprocessing
-    Exploratory data analysis with visualizations
-    Feature selection and engineering
-    Implementation of multiple classification algorithms
-    Regularization techniques (L1 and L2)
-    Model evaluation and comparison
+Heart disease is a major global health issue. Early prediction can improve outcomes significantly. This project develops a classification model that predicts the likelihood of heart disease based on various patient attributes and medical measurements, using several machine learning techniques.
 
-Dataset
+Key features include:
 
-The dataset contains various patient attributes and medical measurements, with a binary target variable indicating the presence of heart disease. Key features include:
+- Data cleaning and preprocessing
+- Exploratory data analysis (EDA)
+- Feature selection and engineering
+- Model training using logistic regression, random forests, and SVM
+- Regularization (L1/L2) techniques
+- Model evaluation
 
-    Demographic information (age, sex)
-    Medical measurements (blood pressure, cholesterol levels)
-    Test results (resting ECG, max heart rate)
-    Symptomatic information (chest pain type, exercise angina)
+## Dataset
 
-Implementation Details
+The dataset includes medical and demographic attributes, with a target variable indicating the presence of heart disease. Notable features are:
 
-The project is implemented as a complete machine learning pipeline with the following components:
-1. Data Preparation
+- **Demographics**: age, sex
+- **Medical Measurements**: blood pressure, cholesterol
+- **Test Results**: ECG, max heart rate
+- **Symptoms**: chest pain type, exercise-induced angina
 
-    Handling missing values
-    Identifying and removing duplicates
-    Dealing with outliers
-    Preparing data for analysis
+## Implementation Details
 
-2. Exploratory Data Analysis (EDA)
+The project follows a comprehensive pipeline:
 
-    Statistical summaries
-    Distribution visualizations
-    Correlation analysis
-    Feature relationship exploration
+### 1. Data Preparation
+- Handle missing values
+- Remove duplicates
+- Address outliers
+- Format data for analysis
 
-3. Data Preprocessing
+### 2. Exploratory Data Analysis (EDA)
+- Statistical summaries
+- Visualizations of distributions and relationships
+- Correlation analysis
 
-    Feature scaling using StandardScaler
-    Categorical variable encoding
-    Feature selection based on statistical tests
+### 3. Data Preprocessing
+- Feature scaling using `StandardScaler`
+- Encoding categorical variables
+- Feature selection via statistical tests
 
-4. Model Training with Regularization
+### 4. Model Training
+- Logistic Regression with L1 (Lasso) and L2 (Ridge) regularization
+- Random Forest Classifier
+- Support Vector Machine (SVM)
 
-    Logistic Regression with L1 regularization (Lasso)
-    Logistic Regression with L2 regularization (Ridge)
-    Random Forest Classifier
-    Support Vector Machine (where applicable)
+### 5. Model Evaluation
+- Metrics: accuracy, precision, recall, F1-score
+- Confusion matrix and ROC curves
+- Feature importance analysis
 
-5. Model Evaluation
+## Installation
 
-    Accuracy, precision, recall, and F1-score metrics
-    Confusion matrices
-    ROC curves (for applicable models)
-    Feature importance analysis
+To set up the project environment:
 
-Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Fadi-Louise/heart-disease-classification.git
+   cd heart-disease-classification
+Install the required dependencies:
 
-This project requires Python 3.5+ and several dependencies. To set up the environment:
-bash
-
-# Clone repository (if applicable)
-git clone https://github.com/Fadi-Louise/heart-disease-classification.git
-cd heart-disease-classification
-
-# Install required packages
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 Dependencies
 
     pandas
+
     numpy
+
     matplotlib
+
     seaborn
+
     scikit-learn
 
 Usage
 
-The project is implemented as a series of Jupyter notebooks that should be run in Google Colab:
+The project is organized as Jupyter notebooks and is intended to be run on Google Colab. The typical workflow is:
 
-    Upload the heart disease dataset to Google Colab
-    Run the data preparation code to clean the dataset
-    Execute the EDA section to understand feature distributions and relationships
-    Proceed with model training and evaluation
+    Upload the heart disease dataset to Google Colab.
+
+    Run the data cleaning and preprocessing code.
+
+    Perform EDA to explore feature distributions and relationships.
+
+    Train and evaluate the classification models.
 
 Results
 
-The models are evaluated based on multiple metrics including accuracy, precision, recall, and F1-score. Results typically show:
+Models are evaluated using various metrics such as accuracy, precision, recall, and F1-score. Expected results:
 
-    Logistic Regression with L1/L2 regularization: Provides a good baseline with interpretable coefficients
-    Random Forest: Often achieves higher accuracy by capturing non-linear relationships
-    SVM: Can perform well on this dataset with proper parameter tuning
+    Logistic Regression: Provides a baseline model with interpretable coefficients.
 
-Feature importance analysis reveals the most predictive indicators of heart disease, which typically include:
+    Random Forest: Captures non-linear relationships, typically achieving higher accuracy.
+
+    SVM: Performs well when properly tuned.
+
+Feature importance analysis typically highlights key indicators for heart disease prediction, including:
 
     Exercise-induced angina
+
     Maximum heart rate
+
     Number of major vessels
+
     ST slope
+
     Chest pain type
 
 Future Work
 
-Potential enhancements for this project include:
+Potential improvements include:
 
-    Implementing more advanced models like gradient boosting or neural networks
-    Performing more extensive hyperparameter tuning
-    Creating a simple web interface for model predictions
-    Exploring additional feature engineering techniques
-    Testing the model on external datasets for robustness
+    Exploring advanced models like gradient boosting or neural networks
 
-This project was created as part of a machine learning course assignment. The model is for educational purposes and should not be used for medical diagnosis.
+    Conducting more hyperparameter tuning
+
+    Creating a web interface for easy model deployment
+
+    Experimenting with additional feature engineering techniques
+
+    Testing the model with external datasets to assess robustness
+
+This project was created as part of a machine learning course assignment and is intended for educational purposes only. The model should not be used for medical diagnoses.
+
